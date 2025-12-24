@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        body {
+            /* This makes the body a positioning context for the pseudo-element */
+            position: relative;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            margin: 0; /* Remove default body margin */
+            padding: 20px; /* Add some padding so content isn't at the very edge */
+            font-family: Arial, sans-serif; /* Example font for text */
+            color: #333; /* Example text color */
+            z-index: 1; /* Ensure body content is above the background pseudo-element */
+            /* Add actual content here for demonstration */
+        }
+
+        body::before {
+            content: ""; /* Essential for pseudo-elements to render */
+            background-image: url('IMG-20250306-WA0005.jpg'); /* Your image path */
+            background-size: cover; /* Cover the entire area */
+            background-position: center center; /* Center the image */
+            background-repeat: no-repeat; /* Don't repeat the image */
+            position: absolute; /* Position relative to the body */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2; /* 20% visibility (0.0 to 1.0) */
+            z-index: -1; /* Puts the pseudo-element behind all other content */
+        }
+
+        /* Example for other content to show it's unaffected by opacity */
+        h1 {
+            color: #007bff; /* Bright blue heading */
+            text-align: left;
+            margin-top: 5px;
+        }
+
+
+        p {
+            max-width: 8000px;
+            margin: 20px auto;
+            line-height: 1.6;
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background for text areas for better readability over the image */
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Page!</h1>
+    <h2>Mubarak Ali</h2>
+    <p>
+        I'm Mubarak Ali, an Embedded Engineer currently contributing my expertise at <span style="color: red;"><b>SanDisk</b></span> India Pvt Ltd.
+        My work primarily involves developing and optimizing embedded systems,
+        where I focus on bridging the gap between hardware and software to create efficient and reliable solutions.
+        I'm passionate about the intricate details of system design and committed to continuous learning to stay at the forefront of embedded technologies.
+        My goal is to leverage my skills to build innovative products that make a tangible impact.
+    </p>
+
+    <img src="images/IMG-20250306-WA0005.jpg" alt="Another image" style="max-width: 20%; height: auto; display: block; margin: 10px left;">
+
+    <h2><button type="submit"><a href="html_l1/index.html" >My_portfolio</a></button></h2>
+
+</body>
+</html>
