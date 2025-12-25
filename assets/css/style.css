@@ -180,6 +180,43 @@ a {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* --- Experience Section --- */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.experience-card p {
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
 /* --- Projects Section --- */
 .projects-grid {
     display: grid;
@@ -221,21 +258,57 @@ a {
     text-align: center;
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
+.contact-mobile {
+    font-size: 1.2rem;
     font-weight: 700;
-    margin: 1.5rem 0;
-    transition: background-color 0.3s, transform 0.3s;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.cta-button:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-3px);
+.contact-mobile::before {
+
+    content: '📱';
+
+    font-size: 1.5rem;
+
 }
+
+
+
+.contact-email {
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    color: var(--primary-color);
+
+    margin-bottom: 1.5rem;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    text-decoration: none;
+
+}
+
+
+
+.contact-email::before {
+
+    content: '📧';
+
+    font-size: 1.5rem;
+
+}
+
+
 
 .social-links a {
     margin: 0 1rem;
