@@ -1,70 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
-    <style>
-        body {
-            /* This makes the body a positioning context for the pseudo-element */
-            position: relative;
-            min-height: 100vh; /* Ensure body takes full viewport height */
-            margin: 0; /* Remove default body margin */
-            padding: 20px; /* Add some padding so content isn't at the very edge */
-            font-family: Arial, sans-serif; /* Example font for text */
-            color: #333; /* Example text color */
-            z-index: 1; /* Ensure body content is above the background pseudo-element */
-            /* Add actual content here for demonstration */
-        }
-
-        body::before {
-            content: ""; /* Essential for pseudo-elements to render */
-            background-image: url('IMG-20250306-WA0005.jpg'); /* Your image path */
-            background-size: cover; /* Cover the entire area */
-            background-position: center center; /* Center the image */
-            background-repeat: no-repeat; /* Don't repeat the image */
-            position: absolute; /* Position relative to the body */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.2; /* 20% visibility (0.0 to 1.0) */
-            z-index: -1; /* Puts the pseudo-element behind all other content */
-        }
-
-        /* Example for other content to show it's unaffected by opacity */
-        h1 {
-            color: #007bff; /* Bright blue heading */
-            text-align: left;
-            margin-top: 5px;
-        }
-
-
-        p {
-            max-width: 8000px;
-            margin: 20px auto;
-            line-height: 1.6;
-            background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background for text areas for better readability over the image */
-            padding: 15px;
-            border-radius: 8px;
-        }
-    </style>
+    <title>Mubarak Ali | Embedded Engineer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <h1>Welcome to My Page!</h1>
-    <h2>Mubarak Ali</h2>
-    <p>
-        I'm Mubarak Ali, an Embedded Engineer currently contributing my expertise at <span style="color: red;"><b>SanDisk</b></span> India Pvt Ltd.
-        My work primarily involves developing and optimizing embedded systems,
-        where I focus on bridging the gap between hardware and software to create efficient and reliable solutions.
-        I'm passionate about the intricate details of system design and committed to continuous learning to stay at the forefront of embedded technologies.
-        My goal is to leverage my skills to build innovative products that make a tangible impact.
-    </p>
+    <header class="header">
+        <nav class="nav">
+            <a href="#home" class="nav-logo">Mubarak Ali</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
-    <img src="images/IMG-20250306-WA0005.jpg" alt="Another image" style="max-width: 20%; height: auto; display: block; margin: 10px left;">
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <img src="assets/images/WhatsApp Image 2025-12-25 at 7.51.32 PM.jpeg" alt="Mubarak Ali" class="hero-image">
+                </div>
+                <h1 class="hero-title">Mubarak Ali</h1>
+                <p class="hero-subtitle">Embedded Engineer at <span style="color: red;"><b>SanDisk</b></span>
+                </p>    
+            </div>
+        </section>
 
-    <h2><button type="submit"><a href="html_l1/index.html" >My_portfolio</a></button></h2>
+        <section class="about section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <p>
+                    I'm an Embedded Engineer at <span style="color: red;"><b>SanDisk</b></span> India Pvt Ltd, where I focus on developing and
+                    optimizing embedded systems.
+                    My passion lies in bridging the gap between hardware and software to create efficient, reliable
+                    solutions.
+                    In my role in the ASIC and PCIe validation department, I blend automation with meticulous detective
+                    work.
+                    I use tools like Jenkins for systematic testing, Metaware debugger for deep software inspection, and
+                    JTAG and PCIe protocol analyzers to decipher complex hardware states and guarantee robustness.
+                </p>
+            </div>
+        </section>
 
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">C / Embedded C</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Java</div>
+                <div class="skill-card">MySQL</div>
+                <div class="skill-card">JTAG Debugging</div>
+                <div class="skill-card">PCIe Analyzers</div>
+                <div class="skill-card">Oscilloscopes</div>
+                <div class="skill-card">PCB Layout</div>
+                <div class="skill-card">Soldering & Rework</div>
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <h2 class="section-title">Projects & Moments</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/images/20241024_143356.jpg" alt="Project Image 1">
+                    <div class="project-info">
+                        <h3>Team Celebration</h3>
+                        <p>A moment with the team during a festive event at the office.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/IMG-20250306-WA0005.jpg" alt="Project Image 2">
+                    <img src="assets/images/20241218_140505.jpg" alt="Project Image 2">
+                    <img src="assets/images/20241220_142114.jpg" alt="Project Image 4">
+                    <div class="project-info">
+                        <h3>Team Lunch</h3>
+                        <p>Enjoying a meal with colleagues in the cafeteria.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/20241220_111600~2.jpg" alt="Project Image 3">
+                    <div class="project-info">
+                        <h3>Conference</h3>
+                        <p>Attending a company conference with teammates.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/20241220_151331.jpg" alt="Project Image 4">
+                    <div class="project-info">
+                        <h3>Team Building</h3>
+                        <p>A fun team-building activity with the group.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <p>Feel free to reach out via email or connect with me on social media.</p>
+                <a href="mailto:tavarakali82@gmail.com" class="cta-button">Email Me</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mubarak-ali-46a256287" target="_blank">LinkedIn</a>
+                    <a href="https://www.github.com/mubaali1" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mubarak Ali. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
