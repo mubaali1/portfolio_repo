@@ -331,8 +331,8 @@ a {
 }
 
 .animation1 {
-    animation-name: flip, pulse;
-    animation-delay: 1s, 2s;
+    animation-name: flip;
+    animation-delay: 1s;
 }
 
 .animation2 {
